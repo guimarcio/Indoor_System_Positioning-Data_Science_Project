@@ -88,6 +88,24 @@ The best value of k was selected based on the highest mean validation accuracy. 
 | PCA-reduced data (no outliers)     | 2        | Cross-Validation | 9      | 98.60%         | 98.09%        |
 | PCA-reduced data (no outliers)     | 2        | Holdout          | 9      | 98.78%         | 95.91%        |
 
+#### Confusion Matrix
+| Actual \ Predicted | Room 0 | Room 1 | Room 2 | Room 3 |
+| ------------------ | ------ | ------ | ------ | ------ |
+| **Room 0**         | 98     | 0      | 2      | 0      |
+| **Room 1**         | 0      | 66     | 3      | 0      |
+| **Room 2**         | 0      | 7      | 89     | 0      |
+| **Room 3**         | 0      | 0      | 3      | 99     |
+
+#### Classification Metrics
+
+| Class  | Precision | Recall | F1-Score |
+| ------ | --------- | ------ | -------- |
+| Room 0 | 1.000     | 0.980  | 0.990    |
+| Room 1 | 0.904     | 0.957  | 0.930    |
+| Room 2 | 0.918     | 0.927  | 0.922    |
+| Room 3 | 1.000     | 0.971  | 0.985    |
+
+
 ### 📈 Gaussian Naive Bayes
 
 The same evaluation procedure was applied to Naive Bayes.
@@ -99,6 +117,25 @@ Since this model does not require hyperparameter tuning in this context, no Grid
 | Standardized data without outliers | 7        | Cross-Validation | 98.76%         | 98.80%        |
 | PCA-reduced data (no outliers)     | 2        | Cross-Validation | 98.55%         | 97.87%        |
 | PCA-reduced data (no outliers)     | 2        | Holdout          | 98.64%         | 93.73%        |
+
+#### Confusion Matrix
+
+| Actual \ Predicted | Room 0 | Room 1 | Room 2 | Room 3 |
+| ------------------ | ------ | ------ | ------ | ------ |
+| **Room 0**         | 97     | 0      | 3      | 0      |
+| **Room 1**         | 0      | 66     | 3      | 0      |
+| **Room 2**         | 0      | 16     | 80     | 0      |
+| **Room 3**         | 0      | 0      | 1      | 101    |
+
+#### Classification Metrics
+
+| Class  | Precision | Recall | F1-Score |
+| ------ | --------- | ------ | -------- |
+| Room 0 | 1.000     | 0.970  | 0.985    |
+| Room 1 | 0.805     | 0.957  | 0.874    |
+| Room 2 | 0.920     | 0.833  | 0.874    |
+| Room 3 | 1.000     | 0.990  | 0.995    |
+
 
 ### 🌲 Decision Tree
 
@@ -112,6 +149,23 @@ Hyperparameter adjustments were performed during cross-validation to improve gen
 | PCA-reduced data (no outliers)     | 2        | Cross-Validation | [gini, 3, 2, 10]                                                         | 98.26%         | 97.27%        |
 | PCA-reduced data (no outliers)     | 2        | Holdout          | [gini, 3, 2, 10]                                                         | 98.30%         | 95.64%        |
 
+#### Confusion Matrix
+
+| Actual \ Predicted | Room 0 | Room 1 | Room 2 | Room 3 |
+| ------------------ | ------ | ------ | ------ | ------ |
+| **Room 0**         | 98     | 0      | 1      | 1      |
+| **Room 1**         | 1      | 65     | 3      | 0      |
+| **Room 2**         | 0      | 9      | 86     | 1      |
+| **Room 3**         | 0      | 0      | 0      | 102    |
+
+#### Classification Metrics
+
+| Class      | Precision | Recall | F1-Score |
+| ---------- | --------- | ------ | -------- |
+| **Room 0** | 0.990     | 0.980  | 0.985    |
+| **Room 1** | 0.878     | 0.942  | 0.909    |
+| **Room 2** | 0.956     | 0.896  | 0.925    |
+| **Room 3** | 0.981     | 1.000  | 0.990    |
 
 ### 🧮 Linear SVM
 
@@ -125,6 +179,24 @@ Model performance was evaluated via cross-validation and holdout testing.
 | PCA-reduced data (no outliers)     | 2        | Cross-Validation | 2.5 | 98.52%         | 98.26%        |
 | PCA-reduced data (no outliers)     | 2        | Holdout          | 2.5 | 98.64%         | 95.10%        |
 
+#### Confusion Matrix
+
+| Actual \ Predicted  | Room 0 | Room 1 | Room 2 | Room 3 |
+| ---------- | ------ | ------ | ------ | ------ |
+| **Room 0** | 97     | 0      | 3      | 0      |
+| **Room 1** | 0      | 66     | 3      | 0      |
+| **Room 2** | 0      | 11     | 85     | 0      |
+| **Room 3** | 0      | 0      | 1      | 101    |
+
+
+#### Classification Metrics
+
+| Class      | Precision | Recall | F1-Score |
+| ---------- | --------- | ------ | -------- |
+| **Room 0** | 1.000     | 0.970  | 0.985    |
+| **Room 1** | 0.857     | 0.957  | 0.904    |
+| **Room 2** | 0.924     | 0.885  | 0.904    |
+| **Room 3** | 1.000     | 0.990  | 0.995    |
 
 ### 🌀 RBF Kernel SVM
 
@@ -138,6 +210,24 @@ Final results are presented based on the best configuration obtained during cros
 | PCA-reduced data (no outliers)     | 2        | Cross-Validation | [10, 0.1]              | 98.53%         | 98.42%        |
 | PCA-reduced data (no outliers)     | 2        | Holdout          | [10, 0.1]              | 98.50%         | 94.82%        |
 
+#### Confusion Matrix
+
+| Actual \ Predicted | Room 0 | Room 1 | Room 2 | Room 3 |
+| ------------------ | ------ | ------ | ------ | ------ |
+| **Room 0**         | 97     | 0      | 3      | 0      |
+| **Room 1**         | 0      | 66     | 3      | 0      |
+| **Room 2**         | 0      | 11     | 85     | 0      |
+| **Room 3**         | 0      | 0      | 2      | 100    |
+
+
+#### Classification Metrics
+
+| Class  | Precision | Recall | F1-Score |
+| ------ | --------- | ------ | -------- |
+| Room 0 | 1.000     | 0.970  | 0.985    |
+| Room 1 | 0.857     | 0.957  | 0.904    |
+| Room 2 | 0.914     | 0.885  | 0.899    |
+| Room 3 | 1.000     | 0.980  | 0.990    |
 
 
  ## 🔍 Key Findings
