@@ -19,7 +19,7 @@ The best-performing model was **RBF Kernel SVM**, trained on the full dataset wi
 3. Open the Jupyter Notebook:
    jupyter notebook
 
-4. Run the main notebook file.
+4. Run the notebook file.
 
 ## 💡 Introduction
 
