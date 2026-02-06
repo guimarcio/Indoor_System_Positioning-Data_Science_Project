@@ -40,7 +40,7 @@ An initial exploratory analysis was conducted using histograms for each of the s
 
 Correlation analysis revealed a strong association between features 1 and 4 (correlation = 0.92), as well as relevant correlations between feature 1 and features 6 and 7. This suggests spatial proximity or directional similarity between certain Wi-Fi routers.
 
-![cor_map.png](cor_map.png)
+![cor_mat.png](cor_mat.png)
 
 Given these correlations, Principal Component Analysis (PCA) was applied for dimensionality reduction. Results showed that projecting the data onto the first two principal components (using the covariance matrix) preserved approximately 85% of the total variance, outperforming direct feature-based dimensionality reduction.
 
