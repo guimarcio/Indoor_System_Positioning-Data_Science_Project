@@ -1,0 +1,9 @@
+jupyter
+matplotlib
+random
+warnings
+numpy
+pandas
+scipy
+sklearn
+ipywidgets
